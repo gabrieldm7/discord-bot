@@ -24,7 +24,7 @@ class Curiosity(commands.Cog):
         self.bot = bot
 
     @commands.hybrid_command(name="curiosity", description="🧠・Command used to send a random curiosity.")
-    async def curiosity(self, ctx: Any):
+    async def curiosity(self, ctx: commands.Context[Any]):
 
         await ctx.defer()
         await ctx.send(content=f"{choice(curiosities)}", reference=ctx.message)
