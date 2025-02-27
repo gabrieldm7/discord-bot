@@ -13,7 +13,7 @@ class Hello(commands.Cog):
         self.bot = bot
 
     @commands.hybrid_command(name="hello", description="👋・Command used to send a greeting.", aliases=["hi"])
-    async def hello(self, ctx: Any):
+    async def hello(self, ctx: commands.Context[Any]):
 
         await ctx.defer()
         await ctx.send(content=f"👋・Hello {ctx.author.mention}, how are you?", reference=ctx.message)
