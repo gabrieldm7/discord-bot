@@ -14,7 +14,7 @@ class Roll(commands.Cog):
         self.bot = bot
 
     @commands.hybrid_command(name="roll", description="🎲・Command used to roll the dice.")
-    async def roll(self, ctx: Any, faces: int = 6):
+    async def roll(self, ctx: commands.Context[Any], faces: int = 6):
 
         await ctx.defer()
 
